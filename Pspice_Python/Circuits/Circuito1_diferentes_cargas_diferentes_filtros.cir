@@ -1,0 +1,24 @@
+* C:\Users\jedua\Desktop\UNICAMP\UNICAMP_2022\2sem2022\TCC\Pspice_Python\Circuits\Circuito1_diferentes_cargas_diferentes_filtros.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Sun Nov 13 18:16:59 2022
+
+
+
+** Analysis setup **
+.tran 1us 150ms 0 1us
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Circuito1_diferentes_cargas_diferentes_filtros.net"
+.INC "Circuito1_diferentes_cargas_diferentes_filtros.als"
+
+
+.probe/CSDF N(A) 
+.probe/CSDF I(R_Rcorrente) 
+
+
+.END

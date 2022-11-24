@@ -1,0 +1,24 @@
+* C:\Users\jedua\Desktop\UNICAMP\UNICAMP_2022\2sem2022\TCC\Pspice_examples\LCfilter.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Nov 14 15:03:52 2022
+
+
+
+** Analysis setup **
+.ac LIN 101 1 10Meg
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "LCfilter.net"
+.INC "LCfilter.als"
+
+
+.probe/CSDF VDB([Vout]) 
+.probe/CSDF VP([Vout]) 
+
+
+.END

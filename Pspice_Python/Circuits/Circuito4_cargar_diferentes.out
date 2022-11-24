@@ -1,0 +1,389 @@
+
+**** 11/13/22 18:18:27 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\jedua\Desktop\UNICAMP\UNICAMP_2022\2sem2022\TCC\Pspice_Python\Circuits\Circuito4_cargar_diferentes.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Sun Nov 13 18:18:23 2022
+
+
+
+** Analysis setup **
+.tran 1us 150ms 0 1us
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "Circuito4_cargar_diferentes.net"
+
+**** INCLUDING Circuito4_cargar_diferentes.net ****
+* Schematics Netlist *
+
+
+
+D_HB5_D1         $N_0002 $N_0003 Dbreak 
+D_HB5_D2         $N_0003 $N_0004 Dbreak 
+D_HB5_D4         $N_0002 0 Dbreak 
+D_HB5_D3         0 $N_0004 Dbreak 
+L_HB5_L1         $N_0004 $N_0005  50uH  
+C_HB5_C1         $N_0002 $N_0005  5uF  
+D_HB6_D1         $N_0006 $N_0007 Dbreak 
+D_HB6_D2         $N_0007 $N_0008 Dbreak 
+D_HB6_D4         $N_0006 0 Dbreak 
+D_HB6_D3         0 $N_0008 Dbreak 
+L_HB6_L1         $N_0008 $N_0009  50uH  
+C_HB6_C1         $N_0006 $N_0009  5uF  
+R_R3         $N_0002 $N_0005  500  
+R_R1         $N_0006 $N_0009  4k  
+X_U2         $N_0001 $N_0007 Sw_tClose PARAMS: tClose=51ms ttran=1u
++  Rclosed=0.01 Ropen=1Meg
+X_U3         $N_0001 $N_0003 Sw_tClose PARAMS: tClose=70ms ttran=1u
++  Rclosed=0.01 Ropen=1Meg
+L_Rede_DHT_La         $N_0010 $N_0011  100nH IC=0 
+L_Rede_DHT_Lc         $N_0012 $N_0013  100nH IC=0 
+L_Rede_DHT_Lb         $N_0014 $N_0015  100nH IC=0 
+V_Rede_DHT_B11         $N_0016 $N_0017  
++SIN 0 3 660 0 0 120
+V_Rede_DHT_C11         $N_0018 $N_0019  
++SIN 0 3 660 0 0 -120
+V_Rede_DHT_C5         $N_0020 $N_0018  
++SIN 0 3 300 0 0 -120
+V_Rede_DHT_B5         $N_0021 $N_0016  
++SIN 0 3 300 0 0 120
+V_Rede_DHT_A5         $N_0022 $N_0023  
++SIN 0 3 300 0 0 0
+V_Rede_DHT_A7         $N_0024 $N_0022  
++SIN 0 3 420 0 0 0
+V_Rede_DHT_B7         $N_0025 $N_0021  
++SIN 0 3 420 0 0 120
+V_Rede_DHT_C7         $N_0026 $N_0020  
++SIN 0 3 420 0 0 -120
+V_Rede_DHT_A9         $N_0010 $N_0024  
++SIN 0 3 540 0 0 0
+V_Rede_DHT_B9         $N_0014 $N_0025  
++SIN 0 3 540 0 0 120
+V_Rede_DHT_C9         $N_0012 $N_0026  
++SIN 0 3 540 0 0 -120
+R_Rede_DHT_Ra         $N_0011 A  10m  
+C_Rede_DHT_Cac         0 A  100n  
+R_Rede_DHT_Rb         $N_0015 0  10m  
+C_Rede_DHT_Cab         0 A  100n  
+V_Rede_DHT_A11         $N_0023 $N_0027  
++SIN 0 3 660 0 0 0
+C_Rede_DHT_Cb         0 0  1n  
+V_Rede_DHT_C         $N_0019 0  
++SIN 0 179.6 60 0 0 -120
+V_Rede_DHT_B         $N_0017 0  
++SIN 0 179.6 60 0 0 120
+V_Rede_DHT_A         $N_0027 0  
++SIN 0 179.6 60 0 0 0
+C_Rede_DHT_Cbc         0 0  100n  
+R_Rede_DHT_Rc         $N_0013 0  10m  
+C_Rede_DHT_Cc         0 0  1n  
+C_Rede_DHT_Ca         0 A  1n  
+R_Rcorrente         A $N_0001  1  
+
+**** RESUMING Circuito4_cargar_diferentes.cir ****
+.INC "Circuito4_cargar_diferentes.als"
+
+
+
+**** INCLUDING Circuito4_cargar_diferentes.als ****
+* Schematics Aliases *
+
+.ALIASES/CSDF
+_   HB5(in+=$N_0003 in-=0 out+=$N_0005 out-=$N_0002 )
+D_HB5_D1          HB5.D1(1=$N_0002 2=$N_0003 )
+D_HB5_D2          HB5.D2(1=$N_0003 2=$N_0004 )
+D_HB5_D4          HB5.D4(1=$N_0002 2=0 )
+D_HB5_D3          HB5.D3(1=0 2=$N_0004 )
+L_HB5_L1          HB5.L1(1=$N_0004 2=$N_0005 )
+C_HB5_C1          HB5.C1(1=$N_0002 2=$N_0005 )
+_   HB6(in+=$N_0007 in-=0 out+=$N_0009 out-=$N_0006 )
+D_HB6_D1          HB6.D1(1=$N_0006 2=$N_0007 )
+D_HB6_D2          HB6.D2(1=$N_0007 2=$N_0008 )
+D_HB6_D4          HB6.D4(1=$N_0006 2=0 )
+D_HB6_D3          HB6.D3(1=0 2=$N_0008 )
+L_HB6_L1          HB6.L1(1=$N_0008 2=$N_0009 )
+C_HB6_C1          HB6.C1(1=$N_0006 2=$N_0009 )
+R_R3            R3(1=$N_0002 2=$N_0005 )
+R_R1            R1(1=$N_0006 2=$N_0009 )
+X_U2            U2(1=$N_0001 2=$N_0007 )
+X_U3            U3(1=$N_0001 2=$N_0003 )
+_   Rede_DHT(A=A B=0 C=0 T=0 )
+L_Rede_DHT_La          Rede_DHT.La(1=$N_0010 2=$N_0011 )
+L_Rede_DHT_Lc          Rede_DHT.Lc(1=$N_0012 2=$N_0013 )
+L_Rede_DHT_Lb          Rede_DHT.Lb(1=$N_0014 2=$N_0015 )
+V_Rede_DHT_B11          Rede_DHT.B11(+=$N_0016 -=$N_0017 )
+V_Rede_DHT_C11          Rede_DHT.C11(+=$N_0018 -=$N_0019 )
+V_Rede_DHT_C5          Rede_DHT.C5(+=$N_0020 -=$N_0018 )
+V_Rede_DHT_B5          Rede_DHT.B5(+=$N_0021 -=$N_0016 )
+V_Rede_DHT_A5          Rede_DHT.A5(+=$N_0022 -=$N_0023 )
+V_Rede_DHT_A7          Rede_DHT.A7(+=$N_0024 -=$N_0022 )
+V_Rede_DHT_B7          Rede_DHT.B7(+=$N_0025 -=$N_0021 )
+V_Rede_DHT_C7          Rede_DHT.C7(+=$N_0026 -=$N_0020 )
+V_Rede_DHT_A9          Rede_DHT.A9(+=$N_0010 -=$N_0024 )
+V_Rede_DHT_B9          Rede_DHT.B9(+=$N_0014 -=$N_0025 )
+V_Rede_DHT_C9          Rede_DHT.C9(+=$N_0012 -=$N_0026 )
+R_Rede_DHT_Ra          Rede_DHT.Ra(1=$N_0011 2=A )
+C_Rede_DHT_Cac          Rede_DHT.Cac(1=0 2=A )
+R_Rede_DHT_Rb          Rede_DHT.Rb(1=$N_0015 2=0 )
+C_Rede_DHT_Cab          Rede_DHT.Cab(1=0 2=A )
+V_Rede_DHT_A11          Rede_DHT.A11(+=$N_0023 -=$N_0027 )
+C_Rede_DHT_Cb          Rede_DHT.Cb(1=0 2=0 )
+V_Rede_DHT_C          Rede_DHT.C(+=$N_0019 -=0 )
+V_Rede_DHT_B          Rede_DHT.B(+=$N_0017 -=0 )
+V_Rede_DHT_A          Rede_DHT.A(+=$N_0027 -=0 )
+C_Rede_DHT_Cbc          Rede_DHT.Cbc(1=0 2=0 )
+R_Rede_DHT_Rc          Rede_DHT.Rc(1=$N_0013 2=0 )
+C_Rede_DHT_Cc          Rede_DHT.Cc(1=0 2=0 )
+C_Rede_DHT_Ca          Rede_DHT.Ca(1=0 2=A )
+R_Rcorrente          Rcorrente(1=A 2=$N_0001 )
+_    _(A=A)
+.ENDALIASES
+
+
+**** RESUMING Circuito4_cargar_diferentes.cir ****
+.probe/CSDF N(A) 
+.probe/CSDF I(R_Rcorrente) 
+
+
+.END
+
+**** 11/13/22 18:18:27 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\jedua\Desktop\UNICAMP\UNICAMP_2022\2sem2022\TCC\Pspice_Python\Circuits\Circuito4_cargar_diferentes.sch
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Dbreak          
+          IS   10.000000E-15 
+          RS     .1          
+         CJO  100.000000E-15 
+
+
+**** 11/13/22 18:18:27 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\jedua\Desktop\UNICAMP\UNICAMP_2022\2sem2022\TCC\Pspice_Python\Circuits\Circuito4_cargar_diferentes.sch
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U2.Smod       X_U3.Smod       
+         RON     .01             .01         
+        ROFF    1.000000E+06    1.000000E+06 
+         VON    1               1            
+        VOFF    0               0            
+
+
+**** 11/13/22 18:18:27 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\jedua\Desktop\UNICAMP\UNICAMP_2022\2sem2022\TCC\Pspice_Python\Circuits\Circuito4_cargar_diferentes.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    A) 502.0E-24  (X_U2.3)    0.0000 (X_U3.3)    0.0000 ($N_0001) 502.0E-24    
+
+($N_0002)-521.8E-21                   ($N_0003) 501.8E-24                       
+
+($N_0004)-521.8E-21                   ($N_0005)-521.8E-21                       
+
+($N_0006)-956.6E-21                   ($N_0007) 502.8E-24                       
+
+($N_0008)-956.6E-21                   ($N_0009)-956.6E-21                       
+
+($N_0010)    0.0000                   ($N_0011) 502.0E-24                       
+
+($N_0012)    0.0000                   ($N_0013)    0.0000                       
+
+($N_0014)    0.0000                   ($N_0015)    0.0000                       
+
+($N_0016)    0.0000                   ($N_0017)    0.0000                       
+
+($N_0018)    0.0000                   ($N_0019)    0.0000                       
+
+($N_0020)    0.0000                   ($N_0021)    0.0000                       
+
+($N_0022)    0.0000                   ($N_0023)    0.0000                       
+
+($N_0024)    0.0000                   ($N_0025)    0.0000                       
+
+($N_0026)    0.0000                   ($N_0027)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Rede_DHT_B11   0.000E+00
+    V_Rede_DHT_C11   0.000E+00
+    V_Rede_DHT_C5   0.000E+00
+    V_Rede_DHT_B5   0.000E+00
+    V_Rede_DHT_A5   0.000E+00
+    V_Rede_DHT_A7   0.000E+00
+    V_Rede_DHT_B7   0.000E+00
+    V_Rede_DHT_C7   0.000E+00
+    V_Rede_DHT_A9   0.000E+00
+    V_Rede_DHT_B9   0.000E+00
+    V_Rede_DHT_C9   0.000E+00
+    V_Rede_DHT_A11   0.000E+00
+    V_Rede_DHT_C   0.000E+00
+    V_Rede_DHT_B   0.000E+00
+    V_Rede_DHT_A   0.000E+00
+    X_U2.V1      0.000E+00
+    X_U3.V1      0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 11/13/22 18:18:27 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\jedua\Desktop\UNICAMP\UNICAMP_2022\2sem2022\TCC\Pspice_Python\Circuits\Circuito4_cargar_diferentes.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** DIODES
+
+
+NAME         D_HB5_D1    D_HB5_D2    D_HB5_D4    D_HB5_D3    D_HB6_D1  
+MODEL        Dbreak      Dbreak      Dbreak      Dbreak      Dbreak    
+ID          -0.00E+00    0.00E+00   -0.00E+00    0.00E+00   -0.00E+00 
+VD          -5.22E-19    5.22E-19   -5.22E-19    5.22E-19   -9.57E-19 
+REQ          7.21E+11    7.21E+11    7.21E+11    7.21E+11    7.21E+11 
+CAP          1.00E-13    1.00E-13    1.00E-13    1.00E-13    1.00E-13 
+
+NAME         D_HB6_D2    D_HB6_D4    D_HB6_D3  
+MODEL        Dbreak      Dbreak      Dbreak    
+ID           0.00E+00   -0.00E+00    0.00E+00 
+VD           9.57E-19   -9.57E-19    9.57E-19 
+REQ          7.21E+11    7.21E+11    7.21E+11 
+CAP          1.00E-13    1.00E-13    1.00E-13 
+
+
+**** VOLTAGE CONTROLLED SWITCHES
+
+
+NAME         X_U2.S1     X_U3.S1   
+MODEL        X_U2.Smod   X_U3.Smod 
+I LOAD      -0.00E+00    0.00E+00 
+V LOAD      -7.55E-25    2.53E-25 
+R LOAD       1.00E+06    1.00E+06 
+V CTRL       0.00E+00    0.00E+00 
+**** 11/13/22 18:18:27 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\jedua\Desktop\UNICAMP\UNICAMP_2022\2sem2022\TCC\Pspice_Python\Circuits\Circuito4_cargar_diferentes.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(    A) 502.0E-24  (X_U2.3)    0.0000 (X_U3.3)    0.0000 ($N_0001) 502.0E-24    
+
+($N_0002)-521.8E-21                   ($N_0003) 501.8E-24                       
+
+($N_0004)-521.8E-21                   ($N_0005)-521.8E-21                       
+
+($N_0006)-956.6E-21                   ($N_0007) 502.8E-24                       
+
+($N_0008)-956.6E-21                   ($N_0009)-956.6E-21                       
+
+($N_0010)    0.0000                   ($N_0011) 502.0E-24                       
+
+($N_0012) -165.9300                   ($N_0013)-1.659E-09                       
+
+($N_0014)  165.9300                   ($N_0015) 1.659E-09                       
+
+($N_0016)  158.1400                   ($N_0017)  155.5400                       
+
+($N_0018) -158.1400                   ($N_0019) -155.5400                       
+
+($N_0020) -160.7300                   ($N_0021)  160.7300                       
+
+($N_0022)    0.0000                   ($N_0023)    0.0000                       
+
+($N_0024)    0.0000                   ($N_0025)  163.3300                       
+
+($N_0026) -163.3300                   ($N_0027)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Rede_DHT_B11  -1.659E-07
+    V_Rede_DHT_C11   1.659E-07
+    V_Rede_DHT_C5   1.659E-07
+    V_Rede_DHT_B5  -1.659E-07
+    V_Rede_DHT_A5   0.000E+00
+    V_Rede_DHT_A7   0.000E+00
+    V_Rede_DHT_B7  -1.659E-07
+    V_Rede_DHT_C7   1.659E-07
+    V_Rede_DHT_A9   0.000E+00
+    V_Rede_DHT_B9  -1.659E-07
+    V_Rede_DHT_C9   1.659E-07
+    V_Rede_DHT_A11   0.000E+00
+    V_Rede_DHT_C   1.659E-07
+    V_Rede_DHT_B  -1.659E-07
+    V_Rede_DHT_A   0.000E+00
+    X_U2.V1      0.000E+00
+    X_U3.V1      0.000E+00
+
+    TOTAL POWER DISSIPATION   5.51E-05  WATTS
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME            6.49
+

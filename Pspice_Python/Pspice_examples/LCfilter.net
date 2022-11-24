@@ -1,0 +1,9 @@
+* Schematics Netlist *
+
+
+
+V_V         Vin 0  AC 1
++SIN 0 1 1 0 0 0
+R_R         0 Vout  1k  
+C_C         0 Vout  1nF  
+L_L         Vin Vout  1uH  

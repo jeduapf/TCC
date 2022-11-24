@@ -1,0 +1,67 @@
+* Schematics Netlist *
+
+
+
+R_R3         $N_0006 $N_0009  1k  
+X_U3         $N_0001 $N_0002 Sw_tClose PARAMS: tClose=60ms ttran=1u
++  Rclosed=0.01 Ropen=1Meg
+D_rec_C_D1         $N_0003 $N_0004 Dbreak 
+D_rec_C_D2         $N_0004 $N_0005 Dbreak 
+D_rec_C_D4         0 $N_0005 Dbreak 
+D_rec_C_D3         $N_0003 0 Dbreak 
+C_rec_C_C1         $N_0003 $N_0005  50u  
+D_rec_LC_D1         $N_0006 $N_0007 Dbreak 
+D_rec_LC_D2         $N_0007 $N_0008 Dbreak 
+D_rec_LC_D4         $N_0006 0 Dbreak 
+D_rec_LC_D3         0 $N_0008 Dbreak 
+L_rec_LC_L1         $N_0008 $N_0009  50uH  
+C_rec_LC_C1         $N_0006 $N_0009  5uF  
+R_R1         0 $N_0002  3  
+R_R2         $N_0003 $N_0005  10  
+X_U2         $N_0001 $N_0007 Sw_tClose PARAMS: tClose=52ms ttran=1u
++  Rclosed=0.01 Ropen=1Meg
+X_U1         $N_0001 $N_0004 Sw_tClose PARAMS: tClose=35ms ttran=1u
++  Rclosed=0.01 Ropen=1Meg
+L_Rede_DHT_La         $N_0010 $N_0011  100nH IC=0 
+L_Rede_DHT_Lc         $N_0012 $N_0013  100nH IC=0 
+L_Rede_DHT_Lb         $N_0014 $N_0015  100nH IC=0 
+V_Rede_DHT_B11         $N_0016 $N_0017  
++SIN 0 3 660 0 0 120
+V_Rede_DHT_C11         $N_0018 $N_0019  
++SIN 0 3 660 0 0 -120
+V_Rede_DHT_C5         $N_0020 $N_0018  
++SIN 0 3 300 0 0 -120
+V_Rede_DHT_B5         $N_0021 $N_0016  
++SIN 0 3 300 0 0 120
+V_Rede_DHT_A5         $N_0022 $N_0023  
++SIN 0 3 300 0 0 0
+V_Rede_DHT_A7         $N_0024 $N_0022  
++SIN 0 3 420 0 0 0
+V_Rede_DHT_B7         $N_0025 $N_0021  
++SIN 0 3 420 0 0 120
+V_Rede_DHT_C7         $N_0026 $N_0020  
++SIN 0 3 420 0 0 -120
+V_Rede_DHT_A9         $N_0010 $N_0024  
++SIN 0 3 540 0 0 0
+V_Rede_DHT_B9         $N_0014 $N_0025  
++SIN 0 3 540 0 0 120
+V_Rede_DHT_C9         $N_0012 $N_0026  
++SIN 0 3 540 0 0 -120
+R_Rede_DHT_Ra         $N_0011 A  10m  
+C_Rede_DHT_Cac         0 A  100n  
+R_Rede_DHT_Rb         $N_0015 0  10m  
+C_Rede_DHT_Cab         0 A  100n  
+V_Rede_DHT_A11         $N_0023 $N_0027  
++SIN 0 3 660 0 0 0
+C_Rede_DHT_Cb         0 0  1n  
+V_Rede_DHT_C         $N_0019 0  
++SIN 0 179.6 60 0 0 -120
+V_Rede_DHT_B         $N_0017 0  
++SIN 0 179.6 60 0 0 120
+V_Rede_DHT_A         $N_0027 0  
++SIN 0 179.6 60 0 0 0
+C_Rede_DHT_Cbc         0 0  100n  
+R_Rede_DHT_Rc         $N_0013 0  10m  
+C_Rede_DHT_Cc         0 0  1n  
+C_Rede_DHT_Ca         0 A  1n  
+R_Rcorrente         A $N_0001  1  

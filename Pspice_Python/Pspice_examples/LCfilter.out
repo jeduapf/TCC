@@ -1,0 +1,111 @@
+
+**** 11/14/22 15:03:52 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\jedua\Desktop\UNICAMP\UNICAMP_2022\2sem2022\TCC\Pspice_examples\LCfilter.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Nov 14 15:03:52 2022
+
+
+
+** Analysis setup **
+.ac LIN 101 1 10Meg
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "LCfilter.net"
+
+**** INCLUDING LCfilter.net ****
+* Schematics Netlist *
+
+
+
+V_V         Vin 0  AC 1
++SIN 0 1 1 0 0 0
+R_R         0 Vout  1k  
+C_C         0 Vout  1nF  
+L_L         Vin Vout  1uH  
+
+**** RESUMING LCfilter.cir ****
+.INC "LCfilter.als"
+
+
+
+**** INCLUDING LCfilter.als ****
+* Schematics Aliases *
+
+.ALIASES/CSDF
+V_V             V(+=Vin -=0 )
+R_R             R(1=0 2=Vout )
+C_C             C(1=0 2=Vout )
+L_L             L(1=Vin 2=Vout )
+_    _(Vin=Vin)
+_    _(Vout=Vout)
+.ENDALIASES
+
+
+**** RESUMING LCfilter.cir ****
+.probe/CSDF VDB([Vout]) 
+.probe/CSDF VP([Vout]) 
+
+
+.END
+
+**** 11/14/22 15:03:52 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\jedua\Desktop\UNICAMP\UNICAMP_2022\2sem2022\TCC\Pspice_examples\LCfilter.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  Vin)    0.0000  ( Vout)    0.0000  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V          0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+**** 11/14/22 15:03:52 *********** Evaluation PSpice (Nov 1999) **************
+
+ * C:\Users\jedua\Desktop\UNICAMP\UNICAMP_2022\2sem2022\TCC\Pspice_examples\LCfilter.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .02
+
