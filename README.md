@@ -34,6 +34,8 @@
 	<br>
 	<img style="border-radius: 50%;" src="https://github.com/jeduapf/TCC/blob/main/Imagens/Circuito1_SMA.png?raw=true" width="100%;" alt=""/>
 	<br>
+	<img style="border-radius: 50%;" src="https://github.com/jeduapf/TCC/blob/main/Apresenta%C3%A7ao/SNR_5freq_10harm_11winlen_800overlap_0.75.gif?raw=true" width="100%;" alt=""/>
+	<br>
 	<img style="border-radius: 50%;" src="https://github.com/jeduapf/TCC/blob/main/Imagens/Circuito1_3D_frequency_plot.png?raw=true" width="100%;" alt=""/>
 	<br>
 	<img style="border-radius: 50%;" src="https://github.com/jeduapf/TCC/blob/main/Imagens/Circuito1_Power_detections.png?raw=true" width="100%;" alt=""/>
