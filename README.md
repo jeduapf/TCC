@@ -28,11 +28,15 @@
 <h2 id="contribuicao">Contribuição</h2>
 <p>
 	Modelagem e aplicação de dois algoritmos simples para detecção de eventos de acionamento de cargas. O primeiro algoritmo é a média deslizante simples do produto tensão por corrente e o segundo um espectrograma da corrente.
-	<img style="border-radius: 50%;" src="https://github.com/jeduapf/TCC/blob/main/Imagens/Circuito1_cargas_diferentes_diferentes_filtros.png?raw=true" width="100px;" alt=""/>
-	<img style="border-radius: 50%;" src="https://github.com/jeduapf/TCC/blob/main/Imagens/Circuito1.png?raw=true" width="100px;" alt=""/>
-	<img style="border-radius: 50%;" src="https://github.com/jeduapf/TCC/blob/main/Imagens/Circuito1_SMA.png?raw=true" width="100px;" alt=""/>
-	<img style="border-radius: 50%;" src="https://github.com/jeduapf/TCC/blob/main/Imagens/Circuito1_3D_frequency_plot.png?raw=true" width="100px;" alt=""/>
-	<img style="border-radius: 50%;" src="https://github.com/jeduapf/TCC/blob/main/Imagens/Circuito1_Power_detections.png?raw=true" width="100px;" alt=""/>
+	<img style="border-radius: 50%;" src="https://github.com/jeduapf/TCC/blob/main/Imagens/Circuito1_cargas_diferentes_diferentes_filtros.png?raw=true" width="100%;" alt=""/>
+	<br>
+	<img style="border-radius: 50%;" src="https://github.com/jeduapf/TCC/blob/main/Imagens/Circuito1.png?raw=true" width="100%;" alt=""/>
+	<br>
+	<img style="border-radius: 50%;" src="https://github.com/jeduapf/TCC/blob/main/Imagens/Circuito1_SMA.png?raw=true" width="100%;" alt=""/>
+	<br>
+	<img style="border-radius: 50%;" src="https://github.com/jeduapf/TCC/blob/main/Imagens/Circuito1_3D_frequency_plot.png?raw=true" width="100%;" alt=""/>
+	<br>
+	<img style="border-radius: 50%;" src="https://github.com/jeduapf/TCC/blob/main/Imagens/Circuito1_Power_detections.png?raw=true" width="100%;" alt=""/>
 </p>
 
 
