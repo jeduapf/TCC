@@ -50,4 +50,4 @@
 </p>
 
 [![Linkedin Badge](https://img.shields.io/badge/-José-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/jeduapf/)](https://www.linkedin.com/in/jeduapf/) 
-[![Gmail Badge](https://img.shields.io/badge/-jeduapf@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:jeduapf@gmail.Com)](mailto:jeduapf@gmail.Com)
+[![Gmail Badge](https://img.shields.io/badge/-jeduapf@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:jeduapf@gmail.com)](mailto:jeduapf@gmail.com)
