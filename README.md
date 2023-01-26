@@ -46,7 +46,7 @@
 <h2 id="contato">Contato</h2>
 <p>
 	<a href="https://www.linkedin.com/in/jeduapf/">
-		<img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/380327?s=460&u=61b426b901b8fe02e12019b1fdb67bf0072d4f00&v=4" width="100px;" alt=""/>
+		<img style="border-radius: 50%;" src="./geek.png" width="100px;" alt=""/>
 		<br />
 		<sub><b>José Eduardo Alves Pereira Filho</b></sub>
 	</a>
